@@ -1302,4 +1302,3 @@ MODULE_DESCRIPTION("3D Graphics driver");
 MODULE_VERSION("1.2");
 MODULE_LICENSE("GPL v2");
 MODULE_ALIAS("platform:kgsl_3d");
-

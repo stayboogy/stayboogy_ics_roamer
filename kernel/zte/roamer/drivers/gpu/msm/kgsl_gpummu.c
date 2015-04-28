@@ -765,4 +765,3 @@ struct kgsl_mmu_pt_ops gpummu_pt_ops = {
 	.mmu_pt_equal = kgsl_gpummu_pt_equal,
 	.mmu_pt_get_flags = kgsl_gpummu_pt_get_flags,
 };
-

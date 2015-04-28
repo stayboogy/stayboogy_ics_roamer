@@ -197,4 +197,3 @@ kgsl_mem_entry_put(struct kgsl_mem_entry *entry)
 }
 
 #endif /* __KGSL_H */
-

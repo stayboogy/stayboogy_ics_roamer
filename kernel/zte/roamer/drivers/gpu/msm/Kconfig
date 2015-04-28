@@ -60,6 +60,10 @@ config MSM_KGSL_2D
 	default y
 	depends on MSM_KGSL && !ARCH_MSM7X27 && !ARCH_MSM7X27A && !(ARCH_QSD8X50 && !MSM_SOC_REV_A)
 
+config MSM_KGSL_DRM
+	bool "Build a DRM interface for the MSM_KGSL driver"
+	depends on MSM_KGSL && DRM
+
 config MSM_KGSL_GPUMMU
 	bool "Enable the GPU MMU in the MSM_KGSL driver"
 	depends on MSM_KGSL && !MSM_KGSL_CFF_DUMP

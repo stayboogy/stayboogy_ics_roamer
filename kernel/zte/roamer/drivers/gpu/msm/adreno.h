@@ -127,4 +127,3 @@ static inline int adreno_is_a2xx(struct adreno_device *adreno_dev)
 
 
 #endif /*__ADRENO_H */
-

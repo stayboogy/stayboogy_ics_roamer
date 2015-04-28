@@ -63,4 +63,3 @@ struct reserve_info {
 
 extern struct reserve_info *reserve_info;
 #endif
-

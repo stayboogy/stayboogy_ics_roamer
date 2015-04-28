@@ -321,7 +321,7 @@ static struct cyttsp_platform_data cypress_i2c_ttsp_platform_data = {
 #endif
 
 #ifdef CONFIG_ANDROID_RAM_CONSOLE
-#define MSM_RAM_CONSOLE_PHYS  0x02500000 //ZTE_BOOT_HUANGYANJUN_20100903_01
+#define MSM_RAM_CONSOLE_PHYS  (PHYS_OFFSET - 0x100000)
 #define MSM_RAM_CONSOLE_SIZE  SZ_1M
 #endif
 
@@ -1611,6 +1611,7 @@ static void __init bt_power_init(void)
 #endif
 
 #ifdef CONFIG_ARCH_MSM7X27
+
 static struct resource kgsl_3d0_resources[] = {
          {
                  .name  = KGSL_3D0_REG_MEMORY,
@@ -1630,8 +1631,8 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 	.pwr_data = {
 		.pwrlevel = {
 			{
-				.gpu_freq = 128000000,
-				.bus_freq = 128000000,
+				.gpu_freq = 160000000,
+				.bus_freq = 160000000,
 			},
 		},
 		.init_level = 0,
@@ -1661,8 +1662,6 @@ struct platform_device msm_kgsl_3d0 = {
                  .platform_data = &kgsl_3d0_pdata,
          },
 };
-
-
 #endif
 
 static struct platform_device msm_device_pmic_leds = {
@@ -3104,8 +3103,7 @@ static struct platform_device *devices[] __initdata = {
 	&msm_bluesleep_device,
 	&msm_bcmsleep_device,    
 #ifdef CONFIG_ARCH_MSM7X27
-//	&msm_device_kgsl,
-	&msm_kgsl_3d0,	
+	&msm_kgsl_3d0,
 #endif
 #ifdef CONFIG_MT9P111
     /*
